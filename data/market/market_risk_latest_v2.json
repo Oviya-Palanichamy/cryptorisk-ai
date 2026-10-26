@@ -1,0 +1,90 @@
+{
+  "component": "market_risk",
+  "version": "2.0",
+  "symbol": "BTCUSDT",
+  "venue": "Binance spot, 1h candles aggregated to UTC days",
+  "data_as_of_utc": "2026-10-12 23:00:00+00:00",
+  "generated_utc": "2026-10-24 06:46:17.384039",
+  "staleness_days": 11.32,
+  "freshness": "STALE",
+  "price": {
+    "last_close": 81850.0,
+    "last_day_return": -0.02296
+  },
+  "risk": {
+    "score_0_100": 31.8,
+    "level": "Moderate",
+    "level_cutpoints": {
+      "Low": "<30",
+      "Moderate": "30-50",
+      "High": "50-70",
+      "Extreme": ">=70"
+    },
+    "component_percentiles": {
+      "vol_forecast": 17.0,
+      "drawdown_90d": 31.8,
+      "vol_shock": 53.8,
+      "downside_semivol": 39.6,
+      "turnover_spike": 46.0
+    },
+    "weights": {
+      "vol_forecast": 0.4,
+      "drawdown_90d": 0.2,
+      "vol_shock": 0.15,
+      "downside_semivol": 0.15,
+      "turnover_spike": 0.1
+    },
+    "top_drivers": [
+      "vol_shock",
+      "vol_forecast",
+      "drawdown_90d"
+    ]
+  },
+  "forecast": {
+    "vol_next_day_daily": 0.01886,
+    "vol_next_7d_daily_avg": 0.01951,
+    "vol_next_7d_annualised": 0.3727,
+    "vol_percentile_vs_last_2y": 17.0,
+    "forecast_for_day": "2026-10-13"
+  },
+  "tail_risk_1d": {
+    "var95": 0.0316,
+    "es95": 0.0424,
+    "var99": 0.0473,
+    "es99": 0.0589
+  },
+  "event_probabilities": {
+    "abs_move_ge_5pct_next_day": 0.0272,
+    "drop_ge_5pct_next_day": 0.0058,
+    "drawdown_ge_5pct_next_7d": 0.2624,
+    "drawdown_ge_10pct_next_7d": 0.0527,
+    "drawdown_ge_15pct_next_7d": 0.0169,
+    "drawdown_ge_20pct_next_7d": 0.0032
+  },
+  "price_bands_7d": {
+    "p2.5": 74775.0,
+    "p10": 77726.0,
+    "p50": 82317.0,
+    "p90": 87390.0,
+    "p97.5": 93513.0
+  },
+  "model_card": {
+    "selected_models": {
+      "next_day_vol": "HAR-RV + weekday",
+      "next_7d_vol": "HAR-RV + quarter (weekday-adj. inputs)",
+      "tail_risk": "HAR-weekday filtered historical simulation (3y residual memory)"
+    },
+    "validation": "walk-forward; validation 2023-24, untouched test 2025-26",
+    "test_metrics": {
+      "vol_1d_QLIKE": 0.312,
+      "vol_1d_R2_log": 0.474,
+      "vol_7d_QLIKE": 0.17,
+      "var95_violation_pct": 4.44,
+      "var99_violation_pct": 1.02,
+      "big_move_AUC": 0.697,
+      "big_move_lift": 2.89
+    },
+    "not_forecast": "price direction (no out-of-sample edge found)"
+  },
+  "disclaimer": "Statistical risk estimate from historical BTC/USDT data; not investment advice and not a price prediction."
+}

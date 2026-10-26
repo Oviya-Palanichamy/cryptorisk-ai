@@ -1,0 +1,11 @@
+feature,feature_value,shap_value,absolute_shap
+first_sent_block,-0.944673,-2.491021,2.491021
+num_txs_as_sender,-0.896037,-1.472967,1.472967
+transacted_w_address_total,0.5355,-1.197308,1.197308
+first_received_block,0.690769,0.851294,0.851294
+num_txs_as receiver,0.472219,0.714282,0.714282
+fees_max,-0.417964,-0.613864,0.613864
+total_txs,-0.410959,-0.314028,0.314028
+fees_median,-0.393693,-0.250233,0.250233
+fees_as_share_max,-0.152879,-0.093231,0.093231
+last_block_appeared_in,-0.90565,-0.086156,0.086156

@@ -1,0 +1,28 @@
+{
+  "wallet_b": {
+    "label": "Wallet 3KGiq1\u2026yo4cT (node 793784)",
+    "node_id": 793784,
+    "address": "3KGiq1k2JW7SFvNCTBdKLoqPSAAvgyo4cT",
+    "predicted_class": "LICIT",
+    "benchmark_label": "LICIT",
+    "illicit_probability": 3.462070452542321e-08,
+    "sampled_incoming_neighbors": 10,
+    "sampled_local_nodes": 13,
+    "original_margin": -17.178814,
+    "expected_margin": -12.225582,
+    "sum_shap": -4.953232
+  },
+  "wallet_a": {
+    "label": "Test wallet (node 783573)",
+    "node_id": 783573,
+    "address": null,
+    "predicted_class": "LICIT",
+    "benchmark_label": "LICIT",
+    "illicit_probability": null,
+    "sampled_incoming_neighbors": 9,
+    "sampled_local_nodes": null,
+    "original_margin": -21.116768,
+    "expected_margin": -14.274154,
+    "sum_shap": -6.842614
+  }
+}
